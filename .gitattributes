@@ -1,0 +1,10 @@
+* text=auto
+composer.lock text
+package-lock.json text
+npm-debug.log text
+yarn-error.log text
+public/hot binary
+public/storage binary
+/storage/* text eol=lf
+/vendor/* text eol=lf
+.env export-ignore
