@@ -4,20 +4,35 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Services Configuration
+    | Third Party Services
     |--------------------------------------------------------------------------
     |
-    | Third-party API configurations used by the application
+    | This file is for storing the credentials for third party services such
+    | as Mailgun, Postmark, AWS and more. This file provides the de facto
+    | location for this type of information, allowing packages to have
+    | a conventional file to locate the various service credentials.
     |
     */
 
-    'exercise_api' => [
-        'key' => env('EXERCISE_DB_API_KEY'),
-        'url' => env('EXERCISE_DB_API_URL', 'https://exercisedb.p.rapidapi.com'),
+    'postmark' => [
+        'key' => env('POSTMARK_API_KEY'),
     ],
 
-    'sports_api' => [
-        'key' => env('SPORTS_API_KEY'),
-        'url' => env('SPORTS_API_URL', 'https://api.api-sports.io'),
+    'resend' => [
+        'key' => env('RESEND_API_KEY'),
     ],
+
+    'ses' => [
+        'key' => env('AWS_ACCESS_KEY_ID'),
+        'secret' => env('AWS_SECRET_ACCESS_KEY'),
+        'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
+    ],
+
+    'slack' => [
+        'notifications' => [
+            'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),
+            'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
+        ],
+    ],
+
 ];
